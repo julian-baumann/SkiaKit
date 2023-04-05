@@ -32,17 +32,18 @@ let package = Package(
     targets: [
 			.target (
 				name: "SkiaKit", 
-				dependencies: ["CSkia"],
-                linkerSettings: [.unsafeFlags(["-L/usr/local/lib", "-L/opt/homebrew/lib"])]
-				/*cSettings: [
-								.headerSearchPath("Shared/Headers"),
-								.headerSearchPath("SkiaKit/Apple", .when (platforms: [.macOS,.tvOS, .iOS])),
-								.headerSearchPath("SkiaKit/macOS", .when (platforms: [.macOS])),
-								.headerSearchPath("SkiaKit/iOS", .when (platforms: [.iOS])),
-								.headerSearchPath("SkiaKit/tvOS", .when (platforms: [.tvOS])),
-						.headerSearchPath("include")],
-						linkerSettings: linkFlags*/
+				dependencies: ["CSkia"]
+//                linkerSettings: [.unsafeFlags(["-L/usr/local/lib", "-L/opt/homebrew/lib"])]
+//				cSettings: [
+//								.headerSearchPath("Shared/Headers"),
+//								.headerSearchPath("SkiaKit/Apple", .when (platforms: [.macOS,.tvOS, .iOS])),
+//								.headerSearchPath("SkiaKit/macOS", .when (platforms: [.macOS])),
+//								.headerSearchPath("SkiaKit/iOS", .when (platforms: [.iOS])),
+//								.headerSearchPath("SkiaKit/tvOS", .when (platforms: [.tvOS])),
+//						.headerSearchPath("include")],
+//						linkerSettings: linkFlags
 			),
+            
 			.target (
 				name: "CSkia",
 				linkerSettings: linkerSettings
