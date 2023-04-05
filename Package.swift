@@ -32,7 +32,8 @@ let package = Package(
     targets: [
 			.target (
 				name: "SkiaKit", 
-				dependencies: ["CSkia"]
+				dependencies: ["CSkia"],
+                linkerSettings: [.unsafeFlags(["-L/usr/local/lib", "-L/opt/homebrew/lib"])]
 				/*cSettings: [
 								.headerSearchPath("Shared/Headers"),
 								.headerSearchPath("SkiaKit/Apple", .when (platforms: [.macOS,.tvOS, .iOS])),
